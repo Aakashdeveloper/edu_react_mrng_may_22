@@ -1,0 +1,72 @@
+https://code.visualstudio.com/ > install
+https://nodejs.org/en/ (install)
+https://github.com/( create account)
+https://git-scm.com/downloads (install)
+https://www.postman.com/ (install)
+
+https://github.com/Aakashdeveloper (follow)
+
+(add to chrome)
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+//Extensions
+> TabNine
+> vscode-icons
+> git history
+> git Lens
+> spellCheck
+> eslint
+
+//////////
+String
+Number
+Boolean
+///////////////////////////
+JSON> JavaScript Object notation
+> Way the represent the data
+[
+    {
+        "name":"John",
+        "class":"UI",
+        "size":"10"
+    },
+    {
+        "name":"Ankit",
+        "class":"React",
+        "storage:"128GB"
+    }
+]
+//////////
+SPA> Single Page Application
+/////////
+React> React is frontend lib/framework 
+which help to build spa using component base structure
+
+NPM > Node Package Manager (1,968,086)
+///////////
+Package.json
+> Entry point point the app
+> scripts > start build test
+> meta data (name,description,version)
+> all the packages we require
+
+///////////////
+Step to generate package.json
+////////////////
+**NodeJS must be install in system
+> open cmd/terminal
+> type "npm init"
+> answer all questions
+> type "yes"
+
+///////////////
+Step to install packages
+////////////////
+**NodeJS must be install in system
+> open cmd/terminal
+> npm i packagename
+
+
+react > main package
+react-script> help to run application
+react-dom > help to render the content on screen
