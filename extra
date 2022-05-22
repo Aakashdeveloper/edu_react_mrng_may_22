@@ -70,3 +70,67 @@ Step to install packages
 react > main package
 react-script> help to run application
 react-dom > help to render the content on screen
+
+////////////Component/////////////
+# Functional
+> Dumb Component
+> They only use for display purpose
+> They cannot maintain state as well no api call
+> Light in weight
+
+# ClassComponent
+> Logical Component
+> They can be use for display purpose as well as logic and api callings
+> They can maintain state
+> Heavy as compare to function
+
+# HooksComponent
+
+JSX > JavaScript XML
+
+(ecma Script)
+///es5
+function add(a,b){
+    return a+b
+}
+add(1,3)
+4
+///es6
+let add = (a,b) => {return a+b} 
+add(1,3)
+4
+
+function add(a,b){
+    let add = [a,b]
+    return add
+}
+
+add(2,5)
+
+[2,5]
+
+
+function add(a,b){
+    return a,b
+}
+add(2,5)
+5
+
+//////////
+#state
+> It act like local variable
+> Each component can have its own state (scope of state is in same component)
+> we can update the value of state (mutable)
+> Any data interaction will happen through state only
+#props
+> Help to transfer the data between nested components
+> we cannot update the value of props (immutable)
+
+constructor > it is use for declare and always called first in the class
+
+
+
+////////JAVASCRIPT////////////////
+> map
+> filter
+> indexof
