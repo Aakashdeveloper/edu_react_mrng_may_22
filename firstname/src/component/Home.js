@@ -11,16 +11,28 @@ class Home extends Component {
         super()
 
         this.state={
-            productData:JSON
+            productData:JSON,
+            filteredData:JSON
         }
-
+    }
+    /*
+        var a = [-1,0,1,2,3]
+        a.filter((data) => {return data>2})
+        [3]
+    */
+    filterProduct = (userInput) => {
+        let output = this.state.productData.filter((item) => {
+            return  item.name.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+        })
+        this.setState({filteredData:output})
     }
 
     render(){
         return (
             <>
-                <Header/>
-                <ProductDisplay prodData={this.state.productData}/>
+                {/* we are reciving the data from header */}
+                <Header userText={(data) => {this.filterProduct(data)}}/>
+                <ProductDisplay prodData={this.state.filteredData}/>
                 <Footer year="2022" month="may"/>
             </>
         )

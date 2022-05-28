@@ -134,3 +134,53 @@ constructor > it is use for declare and always called first in the class
 > map
 > filter
 > indexof
+
+var a = [-1,0,1,2,3]
+a.map((data) => {return data*2})
+[0,2,4,6]
+
+var a = [-1,0,1,2,3]
+a.filter((data) => {return data>2})
+[3]
+
+
+a.filter((data) => {return data*2})
+[-1,1,2,3]
+
+
+10 == 10
+
+map
+> always return same length of output array as input 
+> this help to modify the values of array
+
+filter
+> may or may not return same length of output array as input 
+> help to filter out the values
+> only return those value for which condition/output is true
+
+var a = ["Delhi","Amsterdam","Venice","Helsinki"]
+a.indexOf('Delhi')
+0
+a.indexOf('Helsinki')
+3
+a.indexOf('Paris')
+-1
+a.indexOf('Mumbai')
+-1
+
+
+Parent => Child  (props)
+Child => Parent  (Props with function)
+
+//parent (we right the function)
+function add(a,b){
+    return a+b
+}
+
+//child (we call the function)
+add(1,2)
+
+////////Router////
+v5 
+v6
