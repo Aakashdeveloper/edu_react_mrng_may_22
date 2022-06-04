@@ -1,7 +1,16 @@
 import React,{Component} from 'react';
 import './QuickSearch.css';
+import QuickDisplay from './QuickDisplay';
 
+const quickUrl = "https://zomatoajulypi.herokuapp.com/quicksearch"
 class QuickSearch extends Component {
+    constructor(){
+        super()
+
+        this.state={
+            mealTypes:''
+        }
+    }
     render(){
         return(
             <>
@@ -12,89 +21,18 @@ class QuickSearch extends Component {
                     <span id="QuickSubHeading">
                         Find Restaurants By MealType
                     </span>
-                    <div class="mainBox">
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="rest"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    <a href="./listing.html">BreakFast</a>
-                                </div>
-                                <div class="componentSubHeading">
-                                    Best Deal For Breakfast
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="rest"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    <a href="./listing.html">BreakFast</a>
-                                </div>
-                                <div class="componentSubHeading">
-                                    Best Deal For Breakfast
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="rest"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    <a href="./listing.html">BreakFast</a>
-                                </div>
-                                <div class="componentSubHeading">
-                                    Best Deal For Breakfast
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="rest"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    <a href="./listing.html">BreakFast</a>
-                                </div>
-                                <div class="componentSubHeading">
-                                    Best Deal For Breakfast
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="rest"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    <a href="./listing.html">BreakFast</a>
-                                </div>
-                                <div class="componentSubHeading">
-                                    Best Deal For Breakfast
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="rest"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    <a href="./listing.html">BreakFast</a>
-                                </div>
-                                <div class="componentSubHeading">
-                                    Best Deal For Breakfast
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <QuickDisplay mealData={this.state.mealTypes}/>
                 </div>
             </>
         )
+    }
+    //call api 
+    componentDidMount(){
+        fetch(quickUrl,{method:'GET'})
+        .then((res) =>  res.json())
+        .then((data) => {
+            this.setState({mealTypes:data})
+        })
     }
 }
 

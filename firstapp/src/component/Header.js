@@ -19,7 +19,6 @@ class Header extends Component {
         this.setState({keyword:event.target.value})
         /// here we are passing data to home
         this.props.userText(event.target.value)
-
     }
     
     render(){

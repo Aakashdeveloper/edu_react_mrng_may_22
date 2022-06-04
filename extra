@@ -248,3 +248,11 @@ a.split('&')[0].split('=')[1]
 (post)placeOrder >         Dummy api
 
 https://developerpayment.herokuapp.com/paynow
+
+
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+var b = `my age is ${a}`
+"my age is 10"
