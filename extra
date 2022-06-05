@@ -256,3 +256,6 @@ var b = "my age is "+a
 
 var b = `my age is ${a}`
 "my age is 10"
+
+dummy api
+> npx json-server --watch data.json --port 8700

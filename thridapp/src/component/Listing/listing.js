@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import './listing.css';
-import ListingDisplay from './listingDisplay'
+import ListingDisplay from './listingDisplay';
+import CusinieFilter from '../filters/cuisineFilter.js';
 
 const restOnMeal = "https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id="
 
@@ -14,11 +15,16 @@ class Listing extends Component {
         }
     }
 
+    setDataPerFilter = (data) => {
+        this.setState({restaurantList:data})
+    }
+
     render() {
         return(
             <div className="row">
                 <div id="mainListing">
                     <div id="filter">
+                        <CusinieFilter restPerCuisine={(data) => {this.setDataPerFilter(data)}}/>
                     </div>
                     <ListingDisplay listData={this.state.restaurantList}/>
                 </div>
