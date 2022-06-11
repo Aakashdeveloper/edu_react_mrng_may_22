@@ -259,3 +259,10 @@ var b = `my age is ${a}`
 
 dummy api
 > npx json-server --watch data.json --port 8700
+
+
+Home > action > movieReducer > storefile > index > mapStateToProps(home)
+
+npm i -g create-react-native-app
+
+npx i create-react-native-app appname
