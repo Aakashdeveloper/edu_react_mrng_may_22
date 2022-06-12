@@ -1,0 +1,12 @@
+///first time form new folder
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/edumayreact.git
+git push -u origin master
+
+//from same folder next all time
+git add .
+git commit -m "first commit"
+git push

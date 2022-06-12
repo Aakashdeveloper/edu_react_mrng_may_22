@@ -1,0 +1,20 @@
+footer{
+    height:80px;
+    width:100%;
+    background:#3b2632;
+    color:white
+    /* border:5px double orange */
+}
+.footDiv{
+    float:left;
+    height:50px;
+    width:32%;
+    text-align: center;
+    border-right:2px solid white; 
+}
+ul{
+    list-style-type: none;
+}
+.noborder{
+    border:none
+}
